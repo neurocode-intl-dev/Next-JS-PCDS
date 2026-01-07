@@ -1,7 +1,63 @@
+"use client";
+import { useState, useEffect } from 'react';
 import Navbar from "@/components/Navbar";
 import ContactSection from "./ContactSection";
 
 export default function AboutUsPage() {
+  const [selectedItem, setSelectedItem] = useState(0);
+
+  const whyChooseUsData = [
+    {
+      id: 0,
+      number: "01",
+      title: "Expertise & Experience",
+      numberColor: "#4FB8BE",
+      titleColor: "#57C8CA",
+      lineColor: "#57C8CA",
+      description: "With over 20 years in the healthcare sector, we bring a wealth of expertise as both disability providers and recruitment specialists. Our in-depth knowledge and hands-on experience ensure that we offer unparalleled care for high-dependency patients and connect you with seasoned healthcare professionals across various specialties. Our long-standing commitment to excellence guarantees that we stay at the forefront of industry advancements and deliver the highest standards of service.",
+      image: "/image7.png"
+    },
+    {
+      id: 1,
+      number: "02",
+      title: "Commitment to Quality",
+      numberColor: "#000000",
+      titleColor: "#4FB8BE",
+      lineColor: "#5D5A5A",
+      description: "Quality is at the heart of everything we do. We maintain rigorous standards in recruitment and care delivery, ensuring that every healthcare professional we place and every service we provide meets the highest benchmarks. Our comprehensive vetting process, ongoing training programs, and continuous quality monitoring guarantee excellence in every interaction. We are committed to exceeding expectations and delivering outcomes that make a real difference.",
+      image: "/image15.png"
+    },
+    {
+      id: 2,
+      number: "03",
+      title: "Innovative Solutions",
+      numberColor: "#000000",
+      titleColor: "#4FB8BE",
+      lineColor: "#5D5A5A",
+      description: "We leverage cutting-edge technology and innovative approaches to deliver modern healthcare solutions. Our forward-thinking strategies combine traditional care values with contemporary methods, ensuring efficient service delivery and optimal outcomes. From digital recruitment platforms to advanced care management systems, we continuously evolve to meet the changing needs of the healthcare landscape and provide solutions that are both practical and transformative.",
+      image: "/image16.png"
+    },
+    {
+      id: 3,
+      number: "04",
+      title: "Proven Track Record",
+      numberColor: "#000000",
+      titleColor: "#4FB8BE",
+      lineColor: "#5D5A5A",
+      description: "Our success speaks for itself through countless satisfied clients and successful placements. We have built lasting relationships with healthcare facilities and professionals across the region, earning a reputation for reliability, professionalism, and results. Our track record demonstrates consistent delivery of high-quality services, with measurable positive outcomes for both care recipients and healthcare providers. Trust in our proven ability to deliver excellence every time.",
+      image: "/image17.png"
+    }
+  ];
+
+  // Auto-carousel effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedItem((prev) => (prev + 1) % whyChooseUsData.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [whyChooseUsData.length]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section with Background */}
@@ -44,7 +100,7 @@ export default function AboutUsPage() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-black max-w-lg text-sm sm:text-base md:text-lg xl:text-[24px] xl:text-[24px] text-left font-medium leading-relaxed mt-4">
+                  <p className="text-black max-w-lg text-sm sm:text-base md:text-lg xl:text-[24px] text-left font-medium leading-relaxed mt-4">
                     We connect top healthcare talent with rewarding
                     opportunities and deliver comprehensive NDIS support. Find
                     the perfect match for your care needs or career through our
@@ -116,10 +172,10 @@ export default function AboutUsPage() {
                     <img
                       src="/value1.png"
                       alt="Care"
-                      className="w-5 h-5 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
+                      className="w-6 h-6 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
                     />
                   </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                  <h3 className="text-sm sm:text-xl lg:text-2xl font-bold text-gray-900">
                     Care
                   </h3>
                 </div>
@@ -138,10 +194,10 @@ export default function AboutUsPage() {
                     <img
                       src="/value2.png"
                       alt="Integrity"
-                      className="w-5 h-5 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
+                      className="w-6 h-6 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
                     />
                   </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                  <h3 className="text-sm sm:text-xl lg:text-2xl font-bold text-gray-900">
                     Integrity
                   </h3>
                 </div>
@@ -159,10 +215,10 @@ export default function AboutUsPage() {
                     <img
                       src="/value3.png"
                       alt="Respect"
-                      className="w-5 h-5 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
+                      className="w-6 h-6 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
                     />
                   </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                  <h3 className="text-sm sm:text-xl lg:text-2xl font-bold text-gray-900">
                     Respect
                   </h3>
                 </div>
@@ -180,23 +236,21 @@ export default function AboutUsPage() {
                     <img
                       src="/value4.png"
                       alt="Compassion"
-                      className="w-5 h-5 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
+                      className="w-6 h-6 sm:w-6 sm:h-6 lg:w-12 lg:h-12 object-contain"
                     />
                   </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
+                  <h3 className="text-sm sm:text-xl lg:text-2xl font-bold text-gray-900">
                     Compassion
                   </h3>
                 </div>
                 <p className="text-gray-700 text-xs sm:text-sm lg:text-base leading-relaxed">
-                  Integrity is one of our core pillars. We act ethically,
-                  honestly, and transparently to build trust and foster a
-                  culture of accountability and respect.
+                  Compassion is at the heart of everything we do. We genuinely care for the people we support, offering empathy, patience, and kindness to ensure dignity, comfort, and meaningful care.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Why Choose Us Section - Full Width */}
+          {/* Why Choose Us Section - Full Width WITH AUTOMATIC CAROUSEL */}
           <section className="xl:ml-12 mt-12 sm:mt-16 md:mt-20 lg:mt-32">
             {/* Section Title */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] font-medium text-left text-gray-900 mb-8 sm:mb-10 lg:mb-16 italic">
@@ -204,83 +258,91 @@ export default function AboutUsPage() {
             </h2>
 
             {/* Content Grid - Full width */}
-            <div className="w-full grid md:grid-cols-2 gap-8 sm:gap-10 lg:gap-14 items-start">
-              {/* Left Side - Numbered List */}
+            <div className="w-full grid sm:grid-cols-2 gap-8 sm:gap-6 md:gap-4 min-[1000px]:gap-8 lg:gap-14 items-start">
+              {/* Left Side - Interactive Numbered List */}
               <div className="space-y-8 sm:space-y-10 lg:space-y-14 w-full mt-4 sm:mt-6 lg:mt-8">
-                {/* Item 1 */}
-                <div className="flex gap-3 sm:gap-4 lg:gap-6 items-start w-full">
-                  <div className="flex-shrink-0">
-                    <span className="text-2xl sm:text-3xl md:text-[32px] lg:text-[45px] font-medium text-[#4FB8BE] block">01</span>
+                {whyChooseUsData.map((item, index) => (
+                  <div 
+                    key={item.id}
+                    onClick={() => setSelectedItem(index)}
+                    className="flex gap-3 sm:gap-4 lg:gap-6 items-start w-full cursor-pointer"
+                  >
+                    <div className="flex-shrink-0">
+                      <span 
+                        className="text-2xl sm:text-3xl md:text-[32px] lg:text-[45px] font-medium block transition-all duration-300"
+                        style={{ 
+                          color: selectedItem === index ? item.numberColor : '#000000'
+                        }}
+                      >
+                        {item.number}
+                      </span>
+                    </div>
+                    <div className="relative pl-3 sm:pl-4 lg:pl-6 w-full">
+                      {/* Vertical line */}
+                      <div 
+                        className="absolute left-0 ml-3 sm:ml-4 lg:ml-6 w-[2px] sm:w-[2.5px] lg:w-[3px] transition-all duration-500"
+                        style={{ 
+                          backgroundColor: selectedItem === index ? '#57C8CA' : '#5D5A5A',
+                          top: index === 0 ? '-0.5rem' : index === 1 ? '-2.5rem' : index === 2 ? '-2rem' : '-1.5rem',
+                          height: index === 0 
+                            ? 'calc(100% + 2rem)' 
+                            : index === 1 
+                            ? 'calc(100% + 4rem)' 
+                            : index === 2 
+                            ? 'calc(100% + 4.2rem)' 
+                            : 'calc(100% + 3rem)'
+                        }}
+                      ></div>
+                      <h3 
+                        className="text-base sm:text-xl md:text-[28px] lg:text-[45px] ml-4 sm:ml-8 lg:ml-12 font-semibold mb-2 transition-all duration-300"
+                        style={{ 
+                          color: selectedItem === index ? item.titleColor : '#B0B0B0'
+                        }}
+                      >
+                        {item.title}
+                      </h3>
+                    </div>
                   </div>
-                  <div className="relative pl-3 sm:pl-4 lg:pl-6 w-full">
-                    {/* Vertical line */}
-                    <div className="absolute left-0 -top-4 sm:-top-6 lg:-top-8 ml-3 sm:ml-4 lg:ml-6 bottom-0 w-[2px] sm:w-[2.5px] lg:w-[3px] h-[60px] sm:h-[80px] lg:h-[100px] bg-[#57C8CA]"></div>
-                    <h3 className="text-base sm:text-xl md:text-[28px] lg:text-[45px] ml-4 sm:ml-8 lg:ml-12 font-semibold text-[#57C8CA] mb-2">
-                      Expertise & Experience
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Item 2 */}
-                <div className="flex gap-3 sm:gap-4 lg:gap-6 items-start w-full">
-                  <div className="flex-shrink-0">
-                    <span className="text-2xl sm:text-3xl md:text-[32px] lg:text-[45px] font-medium text-black block">02</span>
-                  </div>
-                  <div className="relative pl-3 sm:pl-4 lg:pl-6 w-full">
-                    {/* Vertical line */}
-                    <div className="absolute left-0 -top-8 sm:-top-12 md:-top-14 lg:-top-16 ml-3 sm:ml-4 lg:ml-6 bottom-0 w-[2px] sm:w-[2.5px] lg:w-[3px] h-[120px] sm:h-[160px] md:h-[180px] lg:h-[210px] bg-[#5D5A5A]"></div>
-                    <h3 className="text-base sm:text-xl md:text-[28px] lg:text-[45px] ml-4 sm:ml-8 lg:ml-12 font-semibold text-[#B0B0B0] mb-2">
-                      Commitment to Quality
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Item 3 */}
-                <div className="flex gap-3 sm:gap-4 lg:gap-6 items-start w-full">
-                  <div className="flex-shrink-0">
-                    <span className="text-2xl sm:text-3xl md:text-[32px] lg:text-[45px] font-medium text-black block">03</span>
-                  </div>
-                  <div className="relative pl-3 sm:pl-4 lg:pl-6 w-full">
-                    {/* Vertical line */}
-                    <div className="absolute left-0 ml-3 sm:ml-4 lg:ml-6 top-0 bottom-0 w-[2px] sm:w-[2.5px] lg:w-[3px] h-[100px] sm:h-[130px] md:h-[150px] lg:h-[170px] bg-[#5D5A5A]"></div>
-                    <h3 className="text-base sm:text-xl md:text-[28px] lg:text-[45px] ml-4 sm:ml-8 lg:ml-12 font-semibold text-[#B0B0B0] mb-2">
-                      Innovative Solutions
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Item 4 */}
-                <div className="flex gap-3 sm:gap-4 lg:gap-6 items-start w-full">
-                  <div className="flex-shrink-0">
-                    <span className="text-2xl sm:text-3xl md:text-[32px] lg:text-[45px] font-medium text-black block">04</span>
-                  </div>
-                  <div className="relative pl-3 sm:pl-4 lg:pl-6 w-full">
-                    {/* Vertical line */}
-                    <div className="absolute left-0 ml-3 sm:ml-4 lg:ml-6 top-0 bottom-0 w-[2px] sm:w-[2.5px] lg:w-[3px] h-[60px] sm:h-[80px] lg:h-[100px] bg-[#5D5A5A]"></div>
-                    <h3 className="text-base sm:text-xl md:text-[28px] lg:text-[45px] ml-4 sm:ml-8 lg:ml-12 font-semibold text-[#B0B0B0] mb-2">
-                      Proven Track Record
-                    </h3>
-                  </div>
-                </div>
+                ))}
               </div>
 
-              {/* Right Side - Image Card with Text */}
-              <div className="relative rounded-[20px] sm:rounded-[25px] lg:rounded-[40px] overflow-hidden shadow-xl h-[300px] min-[400px]:h-[320px] min-[500px]:h-[390px] sm:h-[400px] md:h-[500px] lg:h-[900px] xl:h-[590px] w-full sm:w-[md:w-[350px] lg:w-[480px] xl:w-[650px] md:ml-auto lg:-top-8">
-                {/* Background Image */}
+              {/* Right Side - Dynamic Image Card with Text - AUTO CAROUSEL */}
+              <div className="relative rounded-[20px] sm:rounded-[25px] lg:rounded-[40px] overflow-hidden shadow-xl h-[300px] min-[400px]:h-[320px] min-[500px]:h-[390px] sm:h-[400px] md:h-[500px] lg:h-[800px] xl:h-[590px] w-full sm:w-[300px] md:w-[370px] min-[1000px]:w-[400px] lg:w-[480px] xl:w-[650px] md:ml-auto lg:-top-8 mt-3 sm:mt-0">
+                {/* Animated Background Image */}
                 <img
-                  src="/image7.png"
-                  alt="Healthcare team"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  key={selectedItem}
+                  src={whyChooseUsData[selectedItem].image}
+                  alt={whyChooseUsData[selectedItem].title}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 animate-fadeIn"
                 />
                 
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/50"></div>
                 
-                {/* Text Content */}
+                {/* Animated Text Content */}
                 <div className="relative z-10 p-4 sm:p-6 md:p-6 lg:p-10 h-full flex items-center justify-center">
-                  <p className="text-white text-xs sm:text-sm md:text-[13px] lg:text-[22px] leading-relaxed text-center lg:text-left">
-                    With over 20 years in the healthcare sector, we bring a wealth of expertise as both disability providers and recruitment specialists. Our in-depth knowledge and hands-on experience ensure that we offer unparalleled care for high-dependency patients and connect you with seasoned healthcare professionals across various specialties. Our long-standing commitment to excellence guarantees that we stay at the forefront of industry advancements and deliver the highest standards of service.
+                  <p 
+                    key={`text-${selectedItem}`}
+                    className="text-white text-xs sm:text-sm md:text-[13px] lg:text-[22px] leading-relaxed text-center lg:text-left transition-opacity duration-500 animate-fadeIn"
+                  >
+                    {whyChooseUsData[selectedItem].description}
                   </p>
+                </div>
+
+                {/* Progress Indicators */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+                  {whyChooseUsData.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedItem(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        selectedItem === index 
+                          ? 'w-8 bg-[#4FB8BE]' 
+                          : 'w-2 bg-white/50 hover:bg-white/80'
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -290,6 +352,22 @@ export default function AboutUsPage() {
         <ContactSection/>
       </div>
       
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 }
