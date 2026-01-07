@@ -68,7 +68,8 @@ export default function Footer() {
       className="w-4 h-4 lg:w-6 lg:h-6 object-contain"
     />
                 <a href="tel:0434810910" className="text-gray-900 text-base lg:text-lg font-semibold hover:text-gray-700 transition">
-                  0434810910
+                0400 000 000
+
                 </a>
               </div>
 
@@ -79,8 +80,8 @@ export default function Footer() {
       alt="Email"
       className="w-4 h-4 lg:w-6 lg:h-6 object-contain"
     />
-                <a href="mailto:pcds@outlook.com.au" className="text-gray-900 text-base lg:text-lg font-semibold hover:text-gray-700 transition">
-                  pcds@outlook.com.au
+                <a href="mailto:abc@gmail.com" className="text-gray-900 text-base lg:text-lg font-semibold hover:text-gray-700 transition">
+                  abc@gmail.com
                 </a>
               </div>
             </div>
@@ -137,7 +138,7 @@ export default function Footer() {
         {/* Copyright */}
         <div>
           <p className="text-center text-[#100F0F] text-sm lg:text-[21px] font-medium">
-            © 2026 Professionals Care. All Rights Reserved.
+            © 2026 Care With Heart. All Rights Reserved.
           </p>
         </div>
       </div>
