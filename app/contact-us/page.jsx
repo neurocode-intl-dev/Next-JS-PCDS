@@ -84,7 +84,7 @@ export default function ContactUsPage() {
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base sm:text-sm md:text-xl lg:text-2xl xl:text-[28px] font-normal text-gray-900 mb-1 truncate">0434810910</h3>
+                      <h3 className="text-base sm:text-sm md:text-xl lg:text-2xl xl:text-[28px] font-normal text-gray-900 mb-1 truncate">  0400 000 000</h3>
                       <p className="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg xl:text-[18px] font-light">Call Today</p>
                     </div>
                   </div>
@@ -99,7 +99,7 @@ export default function ContactUsPage() {
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-sm sm:text-sm md:text-lg lg:text-xl xl:text-[28px] font-normal text-gray-900 mb-1 ">pcds@outlook.com.au</h3>
+                      <h3 className="text-sm sm:text-sm md:text-lg lg:text-xl xl:text-[28px] font-normal text-gray-900 mb-1 ">abc@gmail.com</h3>
                       <p className="text-gray-400 text-xs sm:text-xs md:text-base lg:text-lg xl:text-[18px] font-light">Feel Free To Mail Us</p>
                     </div>
                   </div>
